@@ -81,9 +81,9 @@ Then you can use GNU `parallel` like so:
 {% highlight bash%}
 parallel --no-notice --gnu --progress --joblog parjobs --xapply -P 4 \
  ruby -Ilib bin/ght-retrieve-repo -c config.yaml -t {3} {1} {2} \
- ::: `cat projects.txt | cut -f1 -d' '` \
- ::: `cat projects.txt|cut -f2 -d' '` \
- ::: `cat keys.txt`
+ ::: \`cat projects.txt | cut -f1 -d' '\` \
+ ::: \`cat projects.txt|cut -f2 -d' '\` \
+ ::: \`cat keys.txt\`
 {% endhighlight %}
 
 The important parameter to tune here is `-P`, the number of parallel processes.
